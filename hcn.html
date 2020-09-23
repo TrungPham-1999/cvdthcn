@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cv,dthcn</title>
+</head>
+<body>
+<script>
+    let Rectangle = function (width, height){
+        this.width = width;
+        this.height = height;
+        this.getCanvas = function (){
+            let c = document.getElementById('myCanvas');
+            let ctx = c.getContext('2d');
+            ctx.fillRect(4,4, width, height);
+        }
+        this.getPer = function (){
+            return (width + heiht)*2;
+        }
+        this.getArea = function (){
+            return width * height;
+        }
+    };
+    let a = parseInt(prompt(' nhập chiều rộng:'));
+    let b = parseInt(prompt('nhập chiều dài:'));
+    let rectangle = new Rectangle(a,b);
+    rectangle.getCanvas();
+    let perimeter = rectangle.getPer();
+    let area = rectangle.getArea();
+    document.write('<br />'+'chu vi là:'+pẻimeter);
+    document.write('<br />'+'diện tích là:'+area);
+
+
+</script>
+</body>
+</html>
